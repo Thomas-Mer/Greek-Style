@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conqueror’s Code</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- SVG Greek Meander Pattern -->
+  <svg width="0" height="0">
+    <defs>
+      <pattern id="meander" patternUnits="userSpaceOnUse" width="40" height="40">
+        <rect x="0" y="0" width="40" height="40" fill="#f5f5f5" />
+        <path d="M0 20h20v-20h20v40h-40v-20z" fill="none" stroke="#b08d57" stroke-width="3"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <!-- Day/Night Toggle Button -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle day/night mode">
+    <span class="sun">☀️</span>
+    <span class="moon">🌙</span>
+  </button>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <h1>Conqueror’s Code</h1>
+    <p class="tagline">Where Greek legacy meets modern minimalism</p>
+  </section>
+
+  <!-- About Me -->
+  <section class="about">
+    <h2>Origins of the Strategos</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>First Lines of Code</h3>
+          <p>Began my journey, inspired by the logic of ancient philosophers.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>First Campaign</h3>
+          <p>Launched my first project, learning the art of digital conquest.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Modern Strategos</h3>
+          <p>Now blending ancient wisdom with modern code to build the future.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects">
+    <h2>Campaigns & Conquests</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Agora</h3>
+        <p>Open-source forum platform inspired by the ancient Greek marketplace.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Parthenon</h3>
+        <p>Minimalist portfolio template with marble textures and meander borders.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="project-card">
+        <h3>Strategos</h3>
+        <p>Task manager app themed after military campaigns and planning.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills">
+    <h2>Weapons of War</h2>
+    <div class="skills-list">
+      <div title="JavaScript"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#f7df1e" stroke="#b08d57" stroke-width="2"/><text x="50%" y="55%" text-anchor="middle" fill="#232323" font-size="16" font-family="Cinzel, serif">JS</text></svg><br>JavaScript</div>
+      <div title="CSS"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#264de4" stroke="#b08d57" stroke-width="2"/><text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cinzel, serif">CSS</text></svg><br>CSS</div>
+      <div title="HTML"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#e44d26" stroke="#b08d57" stroke-width="2"/><text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cinzel, serif">HTML</text></svg><br>HTML</div>
+      <div title="GSAP"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#88ce02" stroke="#b08d57" stroke-width="2"/><text x="50%" y="55%" text-anchor="middle" fill="#232323" font-size="16" font-family="Cinzel, serif">GS</text></svg><br>GSAP</div>
+      <div title="Three.js"><svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#000" stroke="#b08d57" stroke-width="2"/><text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="16" font-family="Cinzel, serif">3D</text></svg><br>Three.js</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>Summon the Strategist</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="wax-seal">Send</button>
+    </form>
+  </section>
+
+  <!-- Easter Egg: Oracle of Delphi Modal -->
+  <div class="oracle-modal" id="oracleModal">
+    <div class="oracle-content">
+      <span class="close-modal">&times;</span>
+      <h3>Oracle of Delphi</h3>
+      <p class="oracle-quote">“He who conquers himself is the mightiest warrior.”</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+/* Color Palette */
+:root {
+  --bronze: #b08d57;
+  --gold: #ffd700;
+  --marble: #f5f5f5;
+  --stone: #d3d3d3;
+  --navy: #232a4d;
+  --purple: #4b306a;
+  --text-dark: #232323;
+  --text-light: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--marble) url('https://www.transparenttextures.com/patterns/marble.png');
+  color: var(--text-dark);
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1px;
+  color: var(--bronze);
+  margin-bottom: 0.5em;
+}
+
+.hero {
+  position: relative;
+  background: linear-gradient(120deg, var(--navy) 60%, var(--purple) 100%);
+  color: var(--text-light);
+  text-align: center;
+  padding: 6rem 2rem 4rem 2rem;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  opacity: 0.18;
+  z-index: 0;
+}
+.hero h1 {
+  font-size: 3rem;
+  z-index: 1;
+  position: relative;
+  text-shadow: 0 2px 16px var(--navy);
+}
+.hero .tagline {
+  font-size: 1.3rem;
+  font-family: 'Inter', Arial, sans-serif;
+  margin-top: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(36, 30, 11, 0.07);
+  margin-bottom: 2rem;
+}
+
+/* Greek Meander Pattern */
+body::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0; left: 0; right: 0; height: 40px;
+  background: url('#meander');
+  z-index: 100;
+}
+
+/* Timeline, Project Cards, Skills, Contact Form, Oracle Modal */
+.timeline, .project-cards, .skills-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project-cards > div, .skills-list > div {
+  background: var(--stone);
+  border: 2px solid var(--bronze);
+  border-radius: 12px;
+  padding: 1.5rem;
+  min-width: 220px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 2px 8px rgba(36, 30, 11, 0.08);
+}
+.project-cards > div:hover {
+  box-shadow: 0 6px 24px var(--gold);
+  transform: translateY(-8px) scale(1.03);
+}
+.skills-list > div {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact-form input, .contact-form textarea {
+  padding: 0.8rem;
+  border: 1.5px solid var(--bronze);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.contact-form .wax-seal {
+  background: linear-gradient(120deg, var(--gold), var(--bronze));
+  color: var(--navy);
+  font-family: 'Cinzel', serif;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  align-self: center;
+  box-shadow: 0 2px 8px var(--bronze);
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.contact-form .wax-seal:hover {
+  box-shadow: 0 0 24px var(--gold);
+  transform: scale(1.08);
+}
+
+/* Oracle Modal */
+.oracle-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(36, 30, 11, 0.65);
+  align-items: center;
+  justify-content: center;
+}
+.oracle-modal.active {
+  display: flex;
+}
+.oracle-content {
+  background: var(--marble);
+  border: 3px solid var(--bronze);
+  border-radius: 18px;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px var(--navy);
+  position: relative;
+}
+.oracle-content .close-modal {
+  position: absolute;
+  top: 12px; right: 18px;
+  font-size: 2rem;
+  color: var(--bronze);
+  cursor: pointer;
+}
+.oracle-quote {
+  font-style: italic;
+  color: var(--purple);
+  margin-top: 1rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 24px;
+  z-index: 200;
+  background: var(--marble);
+  border: 2px solid var(--bronze);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(36, 30, 11, 0.08);
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.theme-toggle .sun { display: inline; }
+.theme-toggle .moon { display: none; }
+body.night .theme-toggle .sun { display: none; }
+body.night .theme-toggle .moon { display: inline; }
+.theme-toggle:focus { outline: 2px solid var(--gold); }
+
+/* Night Mode Styles */
+body.night {
+  --marble: #23232b;
+  --stone: #2d2d3a;
+  --text-dark: #f5f5f5;
+  --text-light: #23232b;
+  background: var(--marble) url('https://www.transparenttextures.com/patterns/marble.png');
+}
+body.night h1, body.night h2, body.night h3 {
+  color: var(--gold);
+}
+body.night section {
+  background: rgba(35,35,43,0.92);
+  color: var(--text-dark);
+}
+body.night .project-cards > div, body.night .skills-list > div {
+  background: var(--stone);
+  border-color: var(--gold);
+}
+body.night .oracle-content {
+  background: var(--stone);
+  border-color: var(--gold);
+  color: var(--text-dark);
+}
+body.night .contact-form input, body.night .contact-form textarea {
+  background: #23232b;
+  color: var(--text-dark);
+  border-color: var(--gold);
+}
+body.night .contact-form .wax-seal {
+  background: linear-gradient(120deg, var(--bronze), var(--gold));
+  color: var(--stone);
+}
+
+/* Timeline styling */
+.timeline {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1.5rem;
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: var(--bronze);
+  border-radius: 50%;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  box-shadow: 0 0 0 4px var(--marble);
+}
+.timeline-content h3 {
+  margin: 0 0 0.2em 0;
+  font-size: 1.1rem;
+}
+
+/* Project cards */
+.project-card {
+  min-width: 220px;
+  max-width: 260px;
+  background: var(--stone);
+  border: 2px solid var(--bronze);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 2px 8px rgba(36, 30, 11, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.project-card h3 {
+  margin-top: 0;
+}
+.project-card a {
+  margin-top: 0.7rem;
+  color: var(--navy);
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 6px 24px var(--gold);
+  transform: translateY(-8px) scale(1.03);
+}
+.project-card:hover a {
+  color: var(--gold);
+}
+
+/* Skills icons */
+.skills-list > div {
+  text-align: center;
+  font-size: 2rem;
+  min-width: 90px;
+}
+.skills-list svg {
+  margin-bottom: 0.3rem;
+}
+
+/* Wax-seal pressed effect */
+.wax-seal.pressed {
+  box-shadow: 0 0 32px var(--gold);
+  transform: scale(0.95);
+}
+
+@media (max-width: 700px) {
+  .hero h1 { font-size: 2rem; }
+  section { padding: 1.5rem 0.5rem; }
+  .timeline, .project-cards, .skills-list { flex-direction: column; gap: 1rem; }
+  .theme-toggle { top: 8px; right: 8px; width: 40px; height: 40px; }
+  .timeline { margin-left: 0.5rem; }
+  .skills-list > div { min-width: 60px; }
+}
